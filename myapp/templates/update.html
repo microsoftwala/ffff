@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="/update/{{todo.sno}}" method="POST" >
+  <div class="mb-3">
+    <p>Update Todo</p>
+    <input type="text" name="content" id="content" value="{{todo.content}}" placeholder="Write Todo title" size="150px">
+  </div>
+  <div class="mb-3"> 
+    <p> Todo Description</p>
+    <input type="text"  name="desc"  id = "desc" value="{{todo.desc}}" placeholder="Write Todo Description" size="150px">
+  </div>
+  <br><br>
+  <button class="btn" style="background-color: rgb(255, 255, 255); border-radius:5px; width:100px; height:25px; font-weight:bold; cursor:pointer;">Update</button>
+</from>
+{% endblock body %}
